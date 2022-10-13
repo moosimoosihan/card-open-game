@@ -15,7 +15,7 @@ import java.util.Collections;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     //버튼 배열
-    private ImageButton[] buttons = new ImageButton[8];
+    private ImageButton[] buttons = new ImageButton[10];
 
     //이미지 리스트
     private ArrayList<Integer> imageList;
@@ -62,10 +62,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         imageList.add(R.drawable.pig);
         imageList.add(R.drawable.rabbit);
         imageList.add(R.drawable.cat);
+        imageList.add(R.drawable.monkey);
         imageList.add(R.drawable.dog);
         imageList.add(R.drawable.pig);
         imageList.add(R.drawable.rabbit);
         imageList.add(R.drawable.cat);
+        imageList.add(R.drawable.monkey);
 
         //순서 섞기
         Collections.shuffle(imageList);
@@ -117,6 +119,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             position = 6;
         } else if(id== R.id.imageBtn7) {
             position = 7;
+        } else if(id== R.id.imageBtn8) {
+            position = 8;
+        } else if(id== R.id.imageBtn9) {
+            position = 9;
         }
         //업데이트 모델
         updateModel(position);
